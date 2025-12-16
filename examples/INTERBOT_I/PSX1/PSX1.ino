@@ -7,7 +7,7 @@ void setup() {
   Serial.begin(9600);  // เริ่มต้นการสื่อสารผ่าน Serial ที่ความเร็ว 9600 bps
   // กำหนดค่าพิน 13, 11, 9, 12 สำหรับเชื่อมต่อกับคอนโทรลเลอร์ PS2
   // พร้อมด้วยเปิดการสั่นและการรองรับการเชื่อมต่อหลายครั้ง
-  error = ps2x.config_gamepad(13, 12, 9, 11, true, true);
+  error = ps2x.config_gamepad(13, 11, 9, 12, true, true);
   if (error == 0) {
     Serial.println("PS2 Controller connected successfully");
   } else {
@@ -80,3 +80,4 @@ void loop() {
   delay(10);  // หน่วงเวลา 10 ms
 
 }
+
