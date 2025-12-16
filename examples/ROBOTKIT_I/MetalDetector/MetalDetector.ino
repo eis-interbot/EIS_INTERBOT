@@ -145,12 +145,6 @@ void loop() {
     digitalWrite(INB2, LOW);
   }
   int ch4 = adc.readADC(3);
-  for (int chan = 0; chan < 8; chan++) {  // วนลูปอ่านค่า ADC จากทั้ง 8 ช่อง
-    Serial.print(adc.readADC(chan));      // อ่านค่าอนาล็อกจากแต่ละช่องและแสดงผล
-    Serial.print("\t");                   // เว้นวรรคด้วยแท็บระหว่างแต่ละค่า
-
-    Serial.println("");
-  }
   if (ch4 == 0) {                // ตรวจพบโลหะ
     tone(PIEZO_PIN, 1000, 500);  // เล่นเสียง 1000 Hz
   }
