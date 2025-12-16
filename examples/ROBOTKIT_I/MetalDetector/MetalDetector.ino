@@ -144,7 +144,7 @@ void loop() {
     digitalWrite(INA2, HIGH);  // หมุนมอเตอร์ 2 ไปทางซ้าย
     digitalWrite(INB2, LOW);
   }
-  int ch4 = adc.readADC(3);
+  int ch4 = adc.readADC(3);      // อ่านค่าจาก Sensor 3
   if (ch4 == 0) {                // ตรวจพบโลหะ
     tone(PIEZO_PIN, 1000, 500);  // เล่นเสียง 1000 Hz
   }
